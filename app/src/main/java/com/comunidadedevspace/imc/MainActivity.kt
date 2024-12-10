@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         // Recuperar o botao da tela
 
         //Colocar acao no botao setOnClickListener
-        // Recuperar o texto digitado no edt peso
+        // Recuperar o texto digitado no edt peso.
 
         val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
         val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)
