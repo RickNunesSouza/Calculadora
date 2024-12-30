@@ -36,7 +36,7 @@ class ResultActivity : AppCompatActivity() {
         }
         tvClassificacao.text = classificacao
 
-        //para comit and push
+
 
 
 

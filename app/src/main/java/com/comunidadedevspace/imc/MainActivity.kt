@@ -1,23 +1,26 @@
 package com.comunidadedevspace.imc
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.comunidadedevspace.imc.R.id
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
 
-        val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
-        val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)
+        val edtPeso = findViewById<TextInputEditText>(id.edt_peso)
+        val edtAltura = findViewById<TextInputEditText>(id.edt_altura)
 
-        val btnCalcular = findViewById<Button>(R.id.btn_calcular)
+        val btnCalcular = findViewById<Button>(id.btn_calcular)
 
 
         btnCalcular.setOnClickListener {
@@ -44,20 +47,15 @@ class MainActivity : AppCompatActivity() {
               val alturaQ2 = altura * altura
               val resultado = peso / alturaQ2
 
-              // Navegar para a proxima tela
-              // Criar o layout da proxima tela
-              // Passar dados (resultado) para proxima tela
-
-              // Intent - Classe do proprio android
 
               val intent = Intent(this, ResultActivity::class.java)
               intent.putExtra(KEY_RESULT_IMC, resultado)
 
               startActivity(intent)
 
-              //para comit and push
-
-              println("Roque acao do botao" + resultado)
+             // Cores
+              // EditText background + icone
+              //gradiente + icone + titulo + descricao
           }
 
         }
